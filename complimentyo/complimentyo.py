@@ -25,15 +25,6 @@ def handle_error(e):
     return render_template('404.html')
 
 
-@app.route('/response')
-def response():
-    taxi_number = request.args.get('msg')
-    stand_name = request.args.get('name')
-    return render_template('response.html',
-                           phone_number=taxi_number,
-                           stand_name=stand_name)
-
-
 @app.route('/yo')
 def yo():
     """Handle callback request"""
